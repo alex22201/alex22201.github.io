@@ -1,0 +1,205 @@
+tema.css
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+
+}
+
+
+.header {
+  padding: 40px;
+  text-align: center;
+  background:#B22222;
+  color: #000000;
+}
+
+
+.header h1 {
+  font-size: 40px;
+}
+ul{
+font-size: 24px;
+}
+  h2 {
+  font-size: 25px;
+  color: #000000;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:#800000;
+
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color:  #000000;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+ .navbar a.right {
+  float: right;
+}
+
+
+.navbar a:hover {
+  background-color:#DAA520;
+  color: black;
+}
+
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+
+}
+
+
+.side {
+  -ms-flex: 30%;
+  flex: 30%;
+  background-color:#B22222;
+  padding: 20px;
+}
+
+
+.main {
+  -ms-flex: 70%;
+  flex: 70%;
+  background-color: #B22222;
+  padding: 20px;
+}
+
+
+
+
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif; margin:0;}
+
+img {vertical-align: middle;}
+.mySlides {display: none}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name:fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.switch-btn {
+    display: inline-block;
+    width: 62px; /* ширина переключателя */
+    height: 24px; /* высота переключателя */
+    border-radius: 12px; /* радиус скругления */
+    background: #bfbfbf; /* цвет фона */
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+    content: "";
+    height: 36px; /* высота кнопки */
+    width: 36px; /* ширина кнопки */
+    border-radius: 18px; /* радиус кнопки */
+    background: #fff; /* цвет кнопки */
+    top: -6px; /* положение кнопки по вертикали относительно основы */
+    left: -6px; /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms; /* анимация */
+    box-shadow: 0 0 10px 0 #999999; /* тень */
+    position: absolute;
+    z-index: 1;
+}
+.switch-on {
+    background: #fff;
+    box-shadow: inset 0 0 10px 0 #999999; /* тень */
+}
+.switch-on::after {
+    left: 30px;
+    background: #118c4e;
+}
